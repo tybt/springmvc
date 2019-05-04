@@ -50,5 +50,4 @@
         <!-- 给出需要扫描的Dao接口-->
         <property name="basePackage" value="com.dao"/>
     </bean>
-
 </beans>

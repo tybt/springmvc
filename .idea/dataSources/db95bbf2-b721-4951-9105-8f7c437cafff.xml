@@ -916,139 +916,241 @@
     <table id="230" parent="6" name="_order"/>
     <table id="231" parent="6" name="_user"/>
     <table id="232" parent="6" name="moment"/>
-    <table id="233" parent="6" name="test"/>
-    <column id="234" parent="229" name="userId">
+    <table id="233" parent="6" name="moment_favorite"/>
+    <table id="234" parent="6" name="moment_reply"/>
+    <table id="235" parent="6" name="test"/>
+    <table id="236" parent="6" name="user"/>
+    <column id="237" parent="229" name="userId">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="229" name="goodsId">
+    <column id="238" parent="229" name="goodsId">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="229" name="title">
+    <column id="239" parent="229" name="title">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="229" name="result">
+    <column id="240" parent="229" name="result">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="229" name="create_time">
+    <column id="241" parent="229" name="create_time">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="229" name="state">
+    <column id="242" parent="229" name="state">
       <Position>6</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="229" name="number">
+    <column id="243" parent="229" name="number">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="241" parent="229" name="PRIMARY">
+    <key id="244" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="242" parent="230" name="user_id">
+    <column id="245" parent="230" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="230" name="goods_id">
+    <column id="246" parent="230" name="goods_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="230" name="title">
+    <column id="247" parent="230" name="title">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="230" name="userPhone">
+    <column id="248" parent="230" name="userPhone">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="246" parent="230" name="PRIMARY">
+    <key id="249" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="247" parent="231" name="user_phone">
+    <column id="250" parent="231" name="user_phone">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="231" name="create_time">
+    <column id="251" parent="231" name="create_time">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="232" name="ID">
+    <column id="252" parent="232" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="232" name="userID">
+    <column id="253" parent="232" name="userID">
       <Position>2</Position>
+      <Comment>发表的用户ID</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="232" name="createtime">
+    <column id="254" parent="232" name="content">
       <Position>3</Position>
+      <Comment>内容</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="255" parent="232" name="imgs">
+      <Position>4</Position>
+      <Comment>图片</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="256" parent="232" name="create_time">
+      <Position>5</Position>
+      <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="232" name="content">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="253" parent="232" name="userName">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="254" parent="232" name="imgs">
-      <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="255" parent="232" name="favorite">
-      <Position>7</Position>
-      <DataType>int(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="256" parent="232" name="PRIMARY">
+    <key id="257" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="257" parent="233" name="id">
+    <column id="258" parent="233" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="259" parent="233" name="moment_id">
+      <Position>2</Position>
+      <Comment>时刻的id</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="260" parent="233" name="favorite_user_id">
+      <Position>3</Position>
+      <Comment>点赞的用户id</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="261" parent="233" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="262" parent="234" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="263" parent="234" name="userid">
+      <Position>2</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="264" parent="234" name="content">
+      <Position>3</Position>
+      <Comment>回复内容</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="234" name="create_time">
+      <Position>4</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="234" name="reply_user_id">
+      <Position>5</Position>
+      <Comment>回复人的id</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="267" parent="234" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="268" parent="235" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="233" name="name">
+    <column id="269" parent="235" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="259" parent="233" name="PRIMARY">
+    <key id="270" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="271" parent="236" name="userid">
+      <Position>1</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="272" parent="236" name="name">
+      <Position>2</Position>
+      <Comment>昵称</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="273" parent="236" name="phone">
+      <Position>3</Position>
+      <Comment>电话</Comment>
+      <DataType>bigint(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="274" parent="236" name="password">
+      <Position>4</Position>
+      <Comment>密码</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="275" parent="236" name="create_time">
+      <Position>5</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="276" parent="236" name="real_name">
+      <Position>6</Position>
+      <Comment>用户真实名字</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="277" parent="236" name="user_photo">
+      <Position>7</Position>
+      <Comment>用户头像</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="278" parent="236" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>userid</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

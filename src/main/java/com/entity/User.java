@@ -1,72 +1,47 @@
 package com.entity;
 
-import java.util.Date;
 
-
-/**
- * 用户
- * @author  yingjun
- *
- */
 public class User {
-	
-	private long userId;
-	
-	private String userName;
-	
-	private long userPhone;
-	
-	private Date createTime;
-	
-	private int score;
 
-	public long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(long userId) {
-		this.userId = userId;
-	}
+  private long userid;
+  private String name;
+  private long phone;
+  public String password;
 
 
-	public String getUserName() {
-		return userName;
-	}
+  public long getUserid() {
+    return userid;
+  }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+  public void setUserid(long userid) {
+    this.userid = userid;
+  }
 
-	public long getUserPhone() {
-		return userPhone;
-	}
 
-	public void setUserPhone(long userPhone) {
-		this.userPhone = userPhone;
-	}
+  public String getName() {
+    return name;
+  }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
 
-	public int getScore() {
-		return score;
-	}
+  public long getPhone() {
+    return phone;
+  }
 
-	public void setScore(int score) {
-		this.score = score;
-	}
+  public void setPhone(long phone) {
+    this.phone = phone;
+  }
 
-	@Override
-	public String toString() {
-		return "User [userId=" + userId + ", userName=" + userName + ", userPhone=" + userPhone + ", createTime=" + createTime + ", score=" + score
-				+ "]";
-	}
 
-	
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
 }

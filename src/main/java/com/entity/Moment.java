@@ -74,4 +74,16 @@ public class Moment {
     this.favorite = favorite;
   }
 
+    @Override
+    public String toString() {
+        return "Moment{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", createtime=" + createtime +
+                ", content='" + content + '\'' +
+                ", userName='" + userName + '\'' +
+                ", imgs='" + imgs + '\'' +
+                ", favorite=" + favorite +
+                '}';
+    }
 }
