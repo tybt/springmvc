@@ -7,6 +7,9 @@ public class User {
   private String name;
   private long phone;
   public String password;
+  private java.sql.Timestamp createTime;
+  private String realName;
+  private String userPhoto;
 
 
   public long getUserid() {
@@ -44,4 +47,43 @@ public class User {
     this.password = password;
   }
 
+
+  public java.sql.Timestamp getCreateTime() {
+    return createTime;
+  }
+
+  public void setCreateTime(java.sql.Timestamp createTime) {
+    this.createTime = createTime;
+  }
+
+
+  public String getRealName() {
+    return realName;
+  }
+
+  public void setRealName(String realName) {
+    this.realName = realName;
+  }
+
+
+  public String getUserPhoto() {
+    return userPhoto;
+  }
+
+  public void setUserPhoto(String userPhoto) {
+    this.userPhoto = userPhoto;
+  }
+
+  @Override
+  public String toString() {
+    return "User{" +
+            "userid=" + userid +
+            ", name='" + name + '\'' +
+            ", phone=" + phone +
+            ", password='" + password + '\'' +
+            ", createTime=" + createTime +
+            ", realName='" + realName + '\'' +
+            ", userPhoto='" + userPhoto + '\'' +
+            '}';
+  }
 }

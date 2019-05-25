@@ -1,16 +1,16 @@
 package com.dao;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-
 import com.entity.User;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserDao {
 
     //增加用户
     int addCount(@Param("userid") long userid,@Param("phone") int phone,@Param("password") String password);
+
+    int changeImg(@Param("userid") long userid,@Param("user_photo") String user_photo);
 
     //查询用户
     List<User> queryUser(@Param("phone") long phone);

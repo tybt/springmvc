@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="beauty_ssm:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="beauty_ssm_0.0.1-SNAPSHOT_20190418.war">
+    <root id="archive" name="beauty_ssm_0.0.1-SNAPSHOT_20190511.war">
       <element id="artifact" artifact-name="beauty_ssm:war exploded" />
     </root>
   </artifact>

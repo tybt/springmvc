@@ -5,11 +5,9 @@ public class Moment {
 
   private long id;
   private long userId;
-  private java.sql.Timestamp createtime;
   private String content;
-  private String userName;
   private String imgs;
-  private long favorite;
+  private java.sql.Timestamp createTime;
 
 
   public long getId() {
@@ -30,30 +28,12 @@ public class Moment {
   }
 
 
-  public java.sql.Timestamp getCreatetime() {
-    return createtime;
-  }
-
-  public void setCreatetime(java.sql.Timestamp createtime) {
-    this.createtime = createtime;
-  }
-
-
   public String getContent() {
     return content;
   }
 
   public void setContent(String content) {
     this.content = content;
-  }
-
-
-  public String getUserName() {
-    return userName;
-  }
-
-  public void setUserName(String userName) {
-    this.userName = userName;
   }
 
 
@@ -66,24 +46,22 @@ public class Moment {
   }
 
 
-  public long getFavorite() {
-    return favorite;
+  public java.sql.Timestamp getCreateTime() {
+    return createTime;
   }
 
-  public void setFavorite(long favorite) {
-    this.favorite = favorite;
+  public void setCreateTime(java.sql.Timestamp createTime) {
+    this.createTime = createTime;
   }
 
-    @Override
-    public String toString() {
-        return "Moment{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", createtime=" + createtime +
-                ", content='" + content + '\'' +
-                ", userName='" + userName + '\'' +
-                ", imgs='" + imgs + '\'' +
-                ", favorite=" + favorite +
-                '}';
-    }
+  @Override
+  public String toString() {
+    return "{" +
+            "id:" + id +
+            ", userId:" + userId +
+            ", content:'" + content + '\'' +
+            ", imgs:'" + imgs + '\'' +
+            ", createTime:" + createTime +
+            '}';
+  }
 }

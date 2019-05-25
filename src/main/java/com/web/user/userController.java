@@ -1,30 +1,48 @@
-package com.web.login;
+package com.web.user;
 
-import com.alibaba.fastjson.JSONArray;
+
 import com.alibaba.fastjson.JSONObject;
+import com.dao.UserDao;
 import com.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import com.dao.UserDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
+
 
 @Controller
 @RequestMapping("/user")
-public class account {
+public class userController {
     @Autowired
     private UserDao userDao;
+    @RequestMapping("changeImg")
+    public void changeImg(HttpServletRequest request, HttpServletResponse response)
+    throws IOException{
+        String userid=request.getParameter("userid");
+        String user_photo=request.getParameter("user_photo");
+        long longUserid=Long.parseLong(userid);
+        int result=userDao.changeImg(longUserid,user_photo);
+        response.setCharacterEncoding("utf-8");
+        PrintWriter write=response.getWriter();
+        JSONObject resData=new JSONObject();
+
+        if(result==1){
+            resData.put("code",1);
+        }
+        else{
+            resData.put("code",0);
+        }
+        write.write(resData.toString());
+    }
+
     @RequestMapping(value = "/addAcount")
     public void addAcount(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

@@ -15,7 +15,7 @@
     <!-- 激活组件扫描功能,扫描aop的相关组件组件 -->
     <context:component-scan base-package="com.aop"/>
     <!-- 启动对@AspectJ注解的支持 -->
-    <aop:aspectj-autoproxy proxy-target-class="true" />
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
 
     <!--简化配置:
     	1、自动注册DefaultAnnotationHandlerMapping,AnnotationMethodHandlerAdapter
@@ -36,10 +36,15 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+
     <!--扫描web相关的controller-->
     <context:component-scan base-package="com.web"/>
 
-	<!--全局异常捕捉 -->
-	<!--<bean class="com.exception.GlobalExceptionResolver" />-->
+    <!--全局异常捕捉 -->
+    <!--<bean class="com.exception.GlobalExceptionResolver" />-->
 
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="10485760"></property>
+    </bean>
 </beans>

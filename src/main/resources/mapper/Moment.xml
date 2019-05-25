@@ -3,13 +3,45 @@
 <mapper namespace="com.dao.MomentDao">
 
     <select id="getId" resultType="Moment">
-		SELECT *
-		FROM moment
+		SELECT a.userID,a.create_time,b.name,b.phone
+		FROM moment a
+		LEFT JOIN user b
+		ON a.userID=b.userid
 	</select>
 
 	<insert id="inserContent" >
-		INSERT INTO moment (ID, userID, content, create_time) VALUES (#{id},#{userid},#{content},#{create_time})
+		INSERT INTO moment (ID, userID, content, create_time,imgs) VALUES (#{id},#{userid},#{content},#{create_time},#{imgs})
 	</insert>
+
+	<select id="getMoment" resultType="java.util.Map">
+		SELECT a.userID,a.create_time,a.content,a.imgs,b.user_photo,b.name,count(c.moment_id) favors
+		FROM moment a
+		LEFT JOIN user b
+		ON a.userID=b.userid
+		LEFT JOIN moment_favorite c
+		ON a.ID = c.moment_id
+	</select>
+
+
+
+	<select id="getMoemntReply" resultType="java.util.Map">
+		select *
+		FROM moment_reply
+		WHERE moment_id=#{moment_id}
+	</select>
+
+	<insert id="setFavor">
+		INSERT INTO moment_favorite
+		(id, moment_id, favorite_user_id)
+		VALUES (#{id},#{moment_id},#{favorite_user_id})
+	</insert>
+
+	<delete id="deleteFavor">
+		DELETE FROM moment_favorite
+		WHERE moment_id=#{moment_id}
+		AND favorite_user_id=#{favorite_user_id}
+	</delete>
+
 
 
 

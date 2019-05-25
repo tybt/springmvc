@@ -6,6 +6,12 @@
 		INSERT INTO user (userid, name, phone, password) values (#{userid},"",#{phone},#{password})
 	</insert>
 
+	<update id="changeImg">
+		UPDATE user
+		SET user_photo=#{user_photo}
+		WHERE userid=#{userid}
+	</update>
+
     <select id="queryUser" resultType="User">
         SELECT userid
         FROM user
