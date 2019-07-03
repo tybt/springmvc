@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="beauty_ssm:war exploded">
-    <output-path>$PROJECT_DIR$/target/beauty_ssm_0.0.1-SNAPSHOT_20190511</output-path>
+    <output-path>$PROJECT_DIR$/target/beauty_ssm_0.0.1-SNAPSHOT_20190612</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -60,7 +60,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/beauty_ssm_0.0.1-SNAPSHOT_20190511/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/beauty_ssm_0.0.1-SNAPSHOT_20190612/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="beauty_ssm/web/Web" />
     </root>

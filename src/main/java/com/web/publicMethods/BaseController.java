@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
 
 import com.alibaba.fastjson.JSONObject;
@@ -150,6 +151,15 @@ public class BaseController {
     }
 
     public void resJson(HttpServletResponse response, JSONObject object)
+            throws IOException{
+        response.setContentType("text/json;charset=utf-8");
+
+        PrintWriter writer=response.getWriter();
+        writer.write(object.toString());
+
+    }
+
+    public void resJson2(ServletResponse response, JSONObject object)
             throws IOException{
         response.setContentType("text/json;charset=utf-8");
 

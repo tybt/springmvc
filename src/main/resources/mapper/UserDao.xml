@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.UserDao">
 
-	<insert id="addCount">
-		INSERT INTO user (userid, name, phone, password) values (#{userid},"",#{phone},#{password})
+	<insert id="addCount" parameterType="com.entity.User" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO user (name, password) values (#{account},#{password})
 	</insert>
 
 	<update id="changeImg">
@@ -16,7 +16,7 @@
         SELECT userid
         FROM user
         WHERE
-        phone =#{phone}
+        name =#{account}
     </select>
 	
 	<select id="selecPasswordByphone" resultType="User">
@@ -25,6 +25,20 @@
         WHERE
         phone =#{phone}
     </select>
+
+	<select id="selecPasswordByAccount" resultType="java.util.Map">
+        SELECT password
+        FROM user
+        WHERE
+        name =#{account}
+    </select>
+
+	<select id="selectUserinfoByAccount" resultType="java.util.Map">
+		SELECT userid,name,create_time
+		FROM user
+		WHERE
+		name =#{account}
+	</select>
 
 	<select id="queryByPhone" resultType="User">
 		SELECT *

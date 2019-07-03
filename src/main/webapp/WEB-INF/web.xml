@@ -19,35 +19,32 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+
+
+	<!--默认匹配所有的请求 -->
 	<servlet-mapping>
 		<servlet-name>spring-dispatcher</servlet-name>
-		<!--默认匹配所有的请求 -->
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-
-
-	<!-- druid -->
-	<servlet>
-		<servlet-name>DruidStatView</servlet-name>
-		<servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>DruidStatView</servlet-name>
-		<url-pattern>/druid/*</url-pattern>
-	</servlet-mapping>
-
+	<!--过滤-->
 	<filter>
-		<filter-name>DruidWebStatFilter</filter-name>
-		<filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
-		<init-param>
-			<param-name>exclusions</param-name>
-			<param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*</param-value>
-		</init-param>
+		<filter-name>islogin</filter-name>
+		<filter-class>com.web.publicMethods.islogins</filter-class>
 	</filter>
+	<!--需要登录的请求 -->
 	<filter-mapping>
-		<filter-name>DruidWebStatFilter</filter-name>
-		<url-pattern>/*</url-pattern>
+		<filter-name>islogin</filter-name>
+		<url-pattern>/public/*</url-pattern>
 	</filter-mapping>
+
+
+
+
+
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
 
 </web-app>

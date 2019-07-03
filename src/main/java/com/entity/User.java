@@ -3,8 +3,8 @@ package com.entity;
 
 public class User {
 
-  private long userid;
-  private String name;
+  public long userid;
+  public String name;
   private long phone;
   public String password;
   private java.sql.Timestamp createTime;
